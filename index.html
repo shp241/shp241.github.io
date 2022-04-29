@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <title>Shadowverse Evolve Helper</title>
+</head>
+<script>
+    $("button").click(function(){
+        $.post("/try/ajax/demo_test_post.php",
+            {
+                name:"菜鸟教程",
+                url:"http://www.runoob.com"
+            },
+            function(data,status){
+                alert("数据: \n" + data + "\n状态: " + status);
+            });
+    });
+</script>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
+<button>发送一个 HTTP POST 请求页面并获取返回内容</button>
 </body>
 </html>
